@@ -1,15 +1,5 @@
 import './App.css';
 
-// ---- old-style
-// class App extends Component {
-//   render() {
-//     return (
-//
-//     );
-//   }
-// }
-
-
 function App() {
   return (
     <div className="App">
