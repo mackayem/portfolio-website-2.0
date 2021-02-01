@@ -1,0 +1,26 @@
+$lightgrey: #4E5662;
+$lightgreyblue: #8497B4;
+$darknavyblue: #131820;
+$softwhite: #F6EEE3;
+$white: #FAF7F4;
+
+
+// ========== NAV BAR ==========
+
+.navbar {
+  background-color: $lightgreyblue;
+  .navbar-brand {
+    font-family: 'Dawning of a New Day', cursive;
+    font-size: 1.9rem;
+    color: $darknavyblue;
+    font-weight: bold;
+  }
+  .navbar-toggler {
+    border: none;
+  }
+  .nav-link {
+    text-transform: lowercase;
+    font-family: 'Libre Baskerville', serif;
+    text-align: right;
+  }
+}
