@@ -1,35 +1,51 @@
-import React from 'react';
+import React, {Component} from 'react';
 
-function Navbar () {
-  return (
-    <div className="navbar-wrapper">
-      <nav className="navbar navbar-expand-md navbar-light">
-        <a className="navbar-brand" href="#">Emily Mackay</a>
+const NavbarItems = [
+  {
+    title: 'About',
+    url: "#about-section",
+    cName: 'nav-links'
+  },
+  {
+    title: 'Education',
+    url: "#education-section",
+    cName: 'nav-links'
+  },
+  {
+    title: 'Projects',
+    url: "#project-section",
+    cName: 'nav-links'
+  },
+  {
+    title: 'Contact',
+    url: "#contact-section",
+    cName: 'nav-links'
+  }
+]
 
-        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation menu">
-          <span className="navbar-toggler-icon"></span>
-        </button>
 
-        <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav ml-auto">
-            <li className="nav-item mx-2">
-              <a className="nav-link" href="#about-section">About</a>
-            </li>
-            <li className="nav-item mx-2">
-              <a className="nav-link" href="#education-section">Education</a>
-            </li>
-            <li className="nav-item mx-2">
-              <a className="nav-link" href="#projects-section">Projects</a>
-            </li>
-            <li className="nav-item mx-2">
-              <a className="nav-link" href="#contact-section">Contact</a>
-            </li>
-          </ul>
-        </div>
 
+class Navbar extends Component {
+  render() {
+    return(
+
+
+      <nav className="navbar-wrapper">
+        <ul>
+          {NavbarItems.map((item, index) => {
+            return (
+              <li key={index}>
+                <a className={item.cName} href={item.url}>
+                {item.title}</a>
+              </li>
+            )
+          })}
+        </ul>
       </nav>
-    </div>
-  )
-};
+
+      
+    )
+  }
+}
 
 export default Navbar;

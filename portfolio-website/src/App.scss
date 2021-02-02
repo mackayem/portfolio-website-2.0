@@ -3,11 +3,12 @@ $lightgreyblue: #8497B4;
 $darknavyblue: #131820;
 $softwhite: #F6EEE3;
 $white: #FAF7F4;
+$transparent: rgba(255, 255, 255, 0.0);
 
 
 // ========== NAV BAR ==========
 .navbar {
-  background-color: $lightgreyblue;
+  background-color: $lightgrey;
   .navbar-brand {
     font-family: 'Dawning of a New Day', cursive;
     font-size: 1.9rem;
@@ -22,4 +23,15 @@ $white: #FAF7F4;
     font-family: 'Libre Baskerville', serif;
     text-align: right;
   }
+}
+
+
+// ========== SPLASH ==========
+.splash-wrapper {
+  background: url('imgs/header-splash.png') no-repeat;
+  position: relative;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  height: 90vh;
 }
