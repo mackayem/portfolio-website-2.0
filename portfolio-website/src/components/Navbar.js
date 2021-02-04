@@ -1,49 +1,53 @@
 import React, {Component} from 'react';
 
 const NavbarItems = [
-  {
-    title: 'About',
+  { title: 'About',
     url: "#about-section",
-    cName: 'nav-links'
+    className: 'nav-links'
   },
-  {
-    title: 'Education',
+  { title: 'Education',
     url: "#education-section",
-    cName: 'nav-links'
+    className: 'nav-links'
   },
-  {
-    title: 'Projects',
+  { title: 'Projects',
     url: "#project-section",
-    cName: 'nav-links'
+    className: 'nav-links'
   },
-  {
-    title: 'Contact',
+  { title: 'Contact',
     url: "#contact-section",
-    cName: 'nav-links'
+    className: 'nav-links'
   }
 ]
 
 
 
 class Navbar extends Component {
+  state = {toggled: false}
+
+  toggleMenu = () => {
+    this.setState({toggled: !this.state.toggled})
+  }
+
+
+
   render() {
     return(
-
-
-      <nav className="navbar-wrapper">
-        <ul>
+      <nav id="navbar-wrapper">
+        <h1 id="navbar-name">Emily Mackay</h1>
+        <div className="navbar-icon" onClick={this.toggleMenu}>
+          <i className={this.state.toggled ? 'fas fa-times' : 'fas fa-bars'}></i>
+        </div>
+        <ul className={this.state.toggled ? 'navbar-menu active' : 'navbar-menu'}>
           {NavbarItems.map((item, index) => {
             return (
               <li key={index}>
-                <a className={item.cName} href={item.url}>
+                <a className={item.className} href={item.url}>
                 {item.title}</a>
               </li>
             )
           })}
         </ul>
       </nav>
-
-      
     )
   }
 }

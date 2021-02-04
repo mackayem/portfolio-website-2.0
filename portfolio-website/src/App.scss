@@ -7,21 +7,58 @@ $transparent: rgba(255, 255, 255, 0.0);
 
 
 // ========== NAV BAR ==========
-.navbar {
+// .navbar {
+//   background-color: $lightgrey;
+//   .navbar-brand {
+//     font-family: 'Dawning of a New Day', cursive;
+//     font-size: 1.9rem;
+//     color: $darknavyblue;
+//     font-weight: bold;
+//   }
+//   .navbar-toggler {
+//     border: none;
+//   }
+//   .nav-link {
+//     text-transform: lowercase;
+//     font-family: 'Libre Baskerville', serif;
+//     text-align: right;
+//   }
+// }
+
+#navbar-wrapper {
   background-color: $lightgrey;
-  .navbar-brand {
+  display: flex;
+  padding: 0.8rem;
+  #navbar-name {
+    margin: 0;
+    color: $darknavyblue;
     font-family: 'Dawning of a New Day', cursive;
     font-size: 1.9rem;
-    color: $darknavyblue;
     font-weight: bold;
+    width: 300px;
+    margin-left: 1rem;
   }
-  .navbar-toggler {
-    border: none;
-  }
-  .nav-link {
-    text-transform: lowercase;
-    font-family: 'Libre Baskerville', serif;
-    text-align: right;
+  .navbar-menu {
+    padding: 0;
+    margin: 0 1rem 0 0;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-gap: 2rem;
+    width: 80vw;
+    justify-content: flex-end;
+    align-items: center;
+    li {
+      list-style-type: none;
+      .nav-links {
+        color: $white;
+        font-family: 'Raleway', sans-serif;;
+        text-transform: lowercase;
+        &:hover {
+          text-decoration: none;
+          color: $darknavyblue;
+        }
+      }
+    }
   }
 }
 
