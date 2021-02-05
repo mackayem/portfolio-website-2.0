@@ -3,6 +3,7 @@ $lightgreyblue: #8497B4;
 $darknavyblue: #131820;
 $softwhite: #F6EEE3;
 $white: #FAF7F4;
+$redwine: #3A1B21;
 $transparent: rgba(255, 255, 255, 0.0);
 
 
@@ -25,50 +26,116 @@ $transparent: rgba(255, 255, 255, 0.0);
 //   }
 // }
 
+
+
+
 #navbar-wrapper {
-  background-color: $lightgrey;
+  height: 4.2rem;
+  width: 100%;
+  background-color: $redwine;
   display: flex;
-  padding: 0.8rem;
-  #navbar-name {
-    margin: 0;
-    color: $darknavyblue;
-    font-family: 'Dawning of a New Day', cursive;
-    font-size: 1.9rem;
-    font-weight: bold;
-    width: 300px;
-    margin-left: 1rem;
-  }
+  justify-content: center;
+  align-items: center;
   .navbar-menu {
+    margin: 0;
     padding: 0;
-    margin: 0 1rem 0 0;
     display: grid;
     grid-template-columns: repeat(4, auto);
-    grid-gap: 2rem;
-    width: 80vw;
-    justify-content: flex-end;
-    align-items: center;
+    grid-gap: 1.3rem;
     li {
       list-style-type: none;
-      .nav-links {
+      .navbar-links {
+        padding: 0.7rem;
         color: $white;
-        font-family: 'Raleway', sans-serif;;
+        background-color: rgba(255, 255, 255, 0.05);
+        border-radius: 2px;
+        font-family: 'Raleway', sans-serif;
         text-transform: lowercase;
+        font-size: 1.2rem;
         &:hover {
           text-decoration: none;
-          color: $darknavyblue;
+          background-color: rgba(255, 255, 255, 0.2);
         }
       }
     }
   }
 }
+#navbar-icon {
+  display: none;
+  .fas {
+    color: $white;
+    font-size: 1.5rem;
+  }
+}
+
+
+@media screen and (max-width: 500px) {
+  .navbar-menu {
+    transition: all 0.3s ease-out;
+  }
+  .navbar-menu.toggled {
+    transition: all 0.3s ease-in;
+  }
+  #navbar-icon {
+  }
+}
+
+
+
+
+
+
+// @media screen and (max-width: 400px) {
+//   .NavbarItems {
+//     position: relative;
+//   }
+//
+//   .navbar-menu {
+//     display: flex;
+//     flex-direction: column;
+//     width: 100%;
+//     height: 500px;
+//     position: absolute;
+//     top: 80px;
+//     left: -100%;
+//     opacity: 1;
+//     transition: all 0.5s ease;
+//   }
+//
+//   .navbar-menu.toggled {
+//     left: 0;
+//     opacity: 1;
+//     transition: all 0.5s ease;
+//     z-index: 1;
+//   }
+//
+//   .navbar-links {
+//     text-align: center;
+//     padding: 2rem;
+//     width: 100%;
+//     display: table;
+//     &:hover {
+//       border-radius: 0;
+//     }
+//   }
+//
+//
+//   .navbar-icon {
+//     display: block;
+//     position: absolute;
+//     top: 10;
+//     right: 10;
+//   }
+//
+// }
 
 
 // ========== SPLASH ==========
-.splash-wrapper {
-  background: url('imgs/header-splash.png') no-repeat;
-  position: relative;
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: center;
-  height: 90vh;
-}
+// .splash-wrapper {
+//   background: url('imgs/header-splash.png') no-repeat;
+//   position: relative;
+//   background-attachment: fixed;
+//   background-size: cover;
+//   background-position: center;
+//   height: 90vh;
+// }
