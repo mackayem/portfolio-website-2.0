@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import styled, {css} from 'styled-components';
+import LogoName from './LogoName';
 
 const NavbarItems = [
   { title: 'About',
