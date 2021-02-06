@@ -2,30 +2,11 @@ import React, {Component} from 'react';
 import styled, {css} from 'styled-components';
 import LogoName from './LogoName';
 
-const NavbarItems = [
-  { title: 'About',
-    url: "#about-section",
-    className: 'navbar-links'
-  },
-  { title: 'Education',
-    url: "#education-section",
-    className: 'navbar-links'
-  },
-  { title: 'Projects',
-    url: "#project-section",
-    className: 'navbar-links'
-  },
-  { title: 'Contact',
-    url: "#contact-section",
-    className: 'navbar-links'
-  }
-]
-
 
 const StyledNavWrapper = styled.nav`
   height: 4.2rem;
   width: 100%;
-  background-color: $redwine;
+  background-color: #3A1B21;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -41,46 +22,34 @@ const StyledNavUL = styled.ul`
 `;
 
 const StyledNavLink = styled.a`
-  padding: 0.7rem;
-  color: $white;
+  padding: 0.5rem 0.7rem;
+  color: #FAF7F4;
   background-color: rgba(255, 255, 255, 0.05);
   border-radius: 2px;
   font-family: 'Raleway', sans-serif;
   text-transform: lowercase;
   font-size: 1.2rem;
+  transition: all 0.3s ease;
   &:hover {
     text-decoration: none;
+    color: #FAF7F4;
     background-color: rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
   }
 `;
 
 
-
-
-
 class Navbar extends Component {
-  state = {toggled: false}
-  toggleMenu = () => {
-    this.setState({toggled: !this.state.toggled})
-  }
-
   render() {
     return(
-      <nav id="navbar-wrapper">
-        <div id="navbar-icon" onClick={this.toggleMenu}>
-          <i className={this.state.toggled ? 'fas fa-times' : 'fas fa-bars'}></i>
-        </div>
-        <ul className={this.state.toggled ? 'navbar-menu toggled' : 'navbar-menu'}>
-          {NavbarItems.map((item, index) => {
-            return (
-              <li key={index}>
-                <a className={item.className} href={item.url}>
-                {item.title}</a>
-              </li>
-            )
-          })}
-        </ul>
-      </nav>
+      <StyledNavWrapper>
+        <StyledNavUL>
+          <StyledNavLink href="#">About</StyledNavLink>
+          <StyledNavLink href="#">Education</StyledNavLink>
+          <StyledNavLink href="#">Projects</StyledNavLink>
+          <StyledNavLink href="#">Contact</StyledNavLink>
+        </StyledNavUL>
+      </StyledNavWrapper>
     )
   }
 }
