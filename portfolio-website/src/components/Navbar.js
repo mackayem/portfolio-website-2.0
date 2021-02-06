@@ -22,6 +22,41 @@ const NavbarItems = [
 ]
 
 
+const StyledNavWrapper = styled.nav`
+  height: 4.2rem;
+  width: 100%;
+  background-color: $redwine;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+const StyledNavUL = styled.ul`
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-gap: 1.3rem;
+  list-style-type: none;
+`;
+
+const StyledNavLink = styled.a`
+  padding: 0.7rem;
+  color: $white;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 2px;
+  font-family: 'Raleway', sans-serif;
+  text-transform: lowercase;
+  font-size: 1.2rem;
+  &:hover {
+    text-decoration: none;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+`;
+
+
+
+
 
 class Navbar extends Component {
   state = {toggled: false}
