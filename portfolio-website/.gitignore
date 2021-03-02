@@ -1,9 +1,7 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # Work in progress
-/src/components/Navbar.js
 /src/components/NavbarMobile.js
-/src/components/NavbarStyled.js
 
 # dependencies
 /node_modules
