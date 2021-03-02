@@ -1,8 +1,11 @@
 import React from 'react';
+import styled, {css} from 'styled-components';
 
-function Parallax () {
-  return (
-  )
+class Parallax {
+  render() {
+    return(
+    )
+  }
 };
 
 export default Parallax;

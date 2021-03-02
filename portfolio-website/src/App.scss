@@ -129,11 +129,11 @@ $transparent: rgba(255, 255, 255, 0.0);
 
 
 // ========== SPLASH ==========
-// .splash-wrapper {
-//   background: url('imgs/header-splash.png') no-repeat;
-//   position: relative;
-//   background-attachment: fixed;
-//   background-size: cover;
-//   background-position: center;
-//   height: 90vh;
-// }
+.splash-wrapper {
+  background: url('imgs/header-splash.png') no-repeat;
+  position: relative;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  height: 90vh;
+}

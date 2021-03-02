@@ -1,5 +1,8 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
+# Work in progress
+/src/components/Navbar.js
+
 # dependencies
 /node_modules
 /.pnp
